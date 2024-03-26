@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Sign Up Form</title>
+  </head>
+  <body>
+    <div class="main">
+      <div class="container--sign-up-form-background-photo">
+        <img
+          class="sign-up-form-background-photo"
+          src="./assets/backgroundphoto.jpeg"
+          alt="forest background"
+        />
+        <div class="container--odin-overlay">
+          <img class="odin-logo" src="./assets/odin-lined.png" />
+          <h1>ODIN</h1>
+        </div>
+      </div>
+      <form class="container--sections">
+        <section class="container--section-message">
+          <p class="long-text">
+            This is not a real online service! You know you need something like
+            this in your life to help you realize your deepest dreams. Sign up
+            now to get started
+          </p>
+          <p>You <em>know</em> you want to.</p>
+        </section>
+        <section class="container--section-form">
+          <legend>Let's do this!</legend>
+          <div class="container--fieldset">
+            <fieldset>
+              <div>
+                <label for="first_name">FIRST NAME</label>
+                <input type="text" id="first_name" required />
+              </div>
+              <div>
+                <label for="last_name">LAST NAME</label>
+                <input type="text" id="last_name" required />
+              </div>
+            </fieldset>
+            <fieldset>
+              <div>
+                <label for="user_email">EMAIL</label>
+                <input
+                  type="email"
+                  id="user_email"
+                  placeholder="signmeup@gmail.com"
+                  required
+                />
+              </div>
+              <div>
+                <label for="user_phone">PHONE NUMBER</label>
+                <input
+                  id="user_phone"
+                  placeholder="951-123-4567"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                  type="text"
+                  maxlength="12"
+                  required
+                />
+              </div>
+            </fieldset>
+            <fieldset>
+              <div>
+                <label for="user_password">PASSWORD</label>
+                <input type="password" id="user_password" required />
+                <span class="invalid-password hidden"
+                  >* Passwords do not match</span
+                >
+              </div>
+              <div>
+                <label for="confirm_user_password">CONFIRM PASSWORD</label>
+                <input type="password" id="confirm_user_password" required />
+              </div>
+            </fieldset>
+          </div>
+        </section>
+        <section class="container--create-account">
+          <div>
+            <button class="button--create-account" type="submit">
+              Create Account
+            </button>
+          </div>
+
+          <p>Already have an account? <a href="#!">Log in</a></p>
+        </section>
+      </form>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
